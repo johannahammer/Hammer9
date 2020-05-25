@@ -1,0 +1,256 @@
+/* @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700); */
+			
+:root {
+	--bg-color: rgb(235, 235, 235);
+	--font-color: black;
+  }
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
+			@font-face {
+				font-family: 'Schemata';
+				/* src: url(fonts/SourceSansVariable-Roman.otf.woff2) format("truetype-variations"); */
+				src: url(fonts/SchemataGX.ttf) format("truetype-variations")
+				
+			}
+			@font-face {
+		
+				font-family: 'Ortica';
+				src: url(fonts/Ortica-Light.woff2) format("truetype-variations"); */
+				
+			}
+
+			@font-face {
+		
+				font-family: 'Ogg';
+				src: url(fonts/Ogg-Light.ttf) format("truetype-variations"); */
+				
+			}
+
+			.mainnavigation {
+				position: fixed; top:0; height: 50px;
+				font-family: 'Ogg';
+				width: 100vw;
+                box-sizing: border-box;
+				display: inline-flex;
+				flex-direction: row;
+                padding: 0 10px;
+				justify-content: space-between;	
+				text-shadow: 0 0 3px rgb(53, 49, 49);
+            }
+            .menu-item {
+                cursor: pointer;
+                opacity:0.8;
+                transition: all 0.3s ease;
+            }
+            .menu-item:hover {
+                opacity:1; 
+			}
+		
+	
+
+			#left-menu-group {
+				display: inline-flex;
+				flex-direction: row;
+			}
+			#left-menu-group > div {
+				margin-right: 20px;
+			}
+			#left-menu-group > div {
+				margin-right: 20px;
+            }
+
+            /* right menu */
+            
+            #right-menu-group {
+                position: relative;
+				display: inline-flex;
+                flex-direction: row;
+                justify-content: space-between;	
+                align-items: center;
+                justify-content: center;
+
+            }
+            #startVideo {
+                margin-right: 20px;
+            }
+            #invertColoursButtons {
+                display: inline-flex;
+                flex-direction: row;
+                width: 40px;
+                transform: rotate(45deg);
+                
+            }
+            .invertColoursButton {
+                width: 20px;
+                height: 40px;
+                cursor: pointer;
+            }
+
+			.menu-item-text {
+				display: none;
+				position: absolute;
+				left: 0;
+				top: 0;
+				padding: 60px 10px 0 10px;
+				width: 40%;
+				background: #ffffff00;
+				height: 100vh;
+				z-index: -999;
+				font-size: 2.5rem;
+				line-height: 2.2rem;
+				overflow-x: hidden;
+				overflow-y: scroll;
+				
+            }
+
+
+			body {
+                box-sizing: border-box;
+				font-family: 'Schemata';
+				font-weight: 1 999;
+				background-color: var(--bg-color);
+				margin: 0px auto;
+				color: var(--font-color);
+			}
+
+			#overlay {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				-o-transform : scaleX(-1);
+				-webkit-transform : scaleX(-1);
+				transform : scaleX(-1);
+				-ms-filter : fliph; /*IE*/
+				filter : fliph; /*IE*/
+			}
+
+
+			#videoel {
+				-o-transform : scaleX(-1);
+				-webkit-transform : scaleX(-1);
+				transform : scaleX(-1);
+				-ms-filter : fliph; /*IE*/
+				filter : fliph; /*IE*/		
+			}
+
+			#hide-camera {
+				cursor: pointer;
+			}
+
+			#container {
+				position: fixed;
+				width: 360px;
+				height: 230px;
+				top: 0;
+				z-index: -99;
+				overflow: hidden;
+				right: 0;			
+			}
+
+			#content {
+				margin-top : 100px;
+				margin-left : auto;
+				margin-right : auto;
+				max-width: 600px;
+			}
+
+			h2 {
+				font-weight : 400;
+			}
+
+			.btn {
+				/*font-family: 'Lato';*/
+				font-family: 'Schemata';
+				font-size: 16px;
+				font-weight: 200;
+			}
+
+			#controls {
+				text-align : center;
+			}
+
+			#emotion_container {
+				width: 600px;
+			}
+
+			#emotion_icons {
+				height: 50px;
+				padding-left: 40px;
+			}
+
+			.emotion_icon {
+				width : 40px;
+				height : 40px;
+				margin-top: 5px;
+				/*margin-left : 13px;*/
+				margin-left : 35px;
+			}
+
+			#emotion_chart, #emotion_icons {
+				margin: 0 auto;
+				width : 400px;
+			}
+
+			#icon1, #icon2, #icon3, #icon4, #icon5, #icon6 {
+				visibility : hidden;
+			}
+
+			.bar {
+				fill : steelblue;
+				fill-opacity : .9;
+			}
+
+			/* Hammer */
+
+			#landing {
+			    background: url(./media/Landing1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+	position: fixed;
+	pointer-events: none;
+    top: 0;
+    z-index: 999999999999999999999999!important;
+    border: 2px solid rgba(255, 0, 0, 0);
+
+			}
+
+			#emotion-text {
+                font-family: 'Schemata';
+				transition: font-variation-settings 4s ease;
+				font-variation-settings: 'SADD' 0, 'HAPP' 0, 'AGGR' 0;
+				font-size:130px;
+				margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    height: calc(100vh - 200px);
+    text-align: center;
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+	justify-content: center;
+
+			}
+
+			#emotion-text.sad {
+				font-variation-settings: 'SADD' 100, 'HAPP' 0, 'AGGR' 0;
+			}
+
+			#emotion-text.happy {
+				font-variation-settings: 'SADD' 0, 'HAPP' 100, 'AGGR' 0;
+			}
+
+			#emotion-text.angry {
+				font-variation-settings: 'SADD' 0, 'HAPP' 0, 'AGGR' 100;
+			}
+
+			#emotion-text.surprised {
+				font-variation-settings: 'SADD' 100;
+			}
+			#container.hidden {
+                display: none;
+			}
+			
